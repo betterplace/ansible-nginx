@@ -1,0 +1,22 @@
+---
+- name: Install the nginx package
+  yum:
+    name={{item}}
+    state=present
+  with_items:
+    - nginx
+    - httpd-tools
+
+- name: Create sites-enabled folder
+  file:
+    path=/etc/nginx/sites-enabled
+    state=directory
+    owner=root
+    group=root
+    mode=0755
+
+- name: Create runit run script
+  template:
+    src=run.j2
+    dest=/etc/sv/nginx/run
+    mode=0755

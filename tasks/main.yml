@@ -1,0 +1,3 @@
+---
+- include: 10_install_nginx.yml       tags=nginx
+- include: 20_configure_nginx.yml     tags=nginx
