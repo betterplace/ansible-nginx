@@ -1,6 +1,0 @@
----
-- name: restart nginx
-  command: sv restart nginx
-
-- name: reload nginx
-  command: sv hup nginx
