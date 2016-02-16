@@ -1,4 +1,12 @@
 ---
+- name: Add nginx repository file
+  copy:
+    src=nginx.repo
+    dest=/etc/yum.repos.d/nginx.repo
+    owner=root
+    group=root
+    mode=0644
+
 - name: Install the nginx package
   yum:
     name={{item}}
