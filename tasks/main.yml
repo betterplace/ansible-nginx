@@ -1,5 +1,5 @@
 ---
-- include: 10_install_nginx.yml
+- import_tasks: 10_install_nginx.yml
   tags:    nginx
-- include: 20_configure_nginx.yml
+- import_tasks: 20_configure_nginx.yml
   tags:    nginx
